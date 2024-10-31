@@ -1,6 +1,7 @@
 from config.config import cfg, logger
 from custom_shape.custom_load_shapes import MyCustomLoadShape
 
+print(cfg.loadshape_type)
 
 if cfg.webtours_base.included:
     from user_classes.wt_base_scenario import WebToursBaseUserClass

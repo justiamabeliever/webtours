@@ -22,7 +22,7 @@ class Config(BaseSettings):
     webtours_cancel: WebToursCancelScenarioConfig
     pacing: int = Field(5, env="PACING")
 
-"""  
+"""
     класс LogConfig описывает логгер, с помощью которого имеется возможность логировать любые события
     в произвольный .log-файл (в данном случе это будет test_logs.log)
 """

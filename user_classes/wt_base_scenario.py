@@ -36,6 +36,7 @@ class PurchaseFlightTicket(SequentialTaskSet): # класс с задачами 
         print(r00_01_response.status_code)
         print(r00_01_response.request.url)
         print(r00_01_response.text)
+        print(r00_01_response.request.headers)
 
 
 class WebToursBaseUserClass(HttpUser): # юзер-класс, принимающий в себя основные параметры теста
