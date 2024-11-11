@@ -6,21 +6,21 @@ class MyCustomLoadShape(LoadTestShape):
     match cfg.loadshape_type:
         case "baseline":
             stages = [
-                {"duration": 5, "users": 1, "spawn_rate": 1}
+                {"duration": 60, "users": 1, "spawn_rate": 1}
             ]
             
         case "fixedload":
             stages = [
-                {"duration": 300, "users": 10, "spawn_rate": 2}
+                {"duration": 300, "users": 20, "spawn_rate": 0.3}
             ]
 
         case "stages":
             stages = [
-                {"duration": 30, "users": 10, "spawn_rate": 2},
-                {"duration": 60, "users": 20, "spawn_rate": 2},
-                {"duration": 90, "users": 30, "spawn_rate": 2},
-                {"duration": 120, "users": 40, "spawn_rate": 2},
-                {"duration": 150, "users": 50, "spawn_rate": 2}
+                {"duration": 60, "users": 5, "spawn_rate": 0.3}, #0.3 пользователя в секунду, то есть один юзер в ~ 3секунды / все 10 за 30 секунд
+                {"duration": 120, "users": 10, "spawn_rate": 0.3},
+                {"duration": 180, "users": 15, "spawn_rate": 0.3},
+                {"duration": 240, "users": 20, "spawn_rate": 0.3},
+                {"duration": 300, "users": 25, "spawn_rate": 0.3}
             ]
 
     def tick(self): # стандартная функция локаста, взятая из документации, для работы с кастомными "Лоад-Шейпами"

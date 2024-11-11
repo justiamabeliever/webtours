@@ -6,8 +6,9 @@ print(cfg.loadshape_type)
 if cfg.webtours_base.included:
     from user_classes.wt_base_scenario import WebToursBaseUserClass
     WebToursBaseUserClass.weight = cfg.webtours_base.weight
-
-    logger.info('Imported WebToursBaseUserClass')
+    logger.info(f'Imported WebToursBaseUserClass with {WebToursBaseUserClass.weight}')
 
 if cfg.webtours_cancel.included:
-    pass
+    from user_classes.wt_cancel_scenario import WebToursCancelUserClass
+    WebToursCancelUserClass.weight = cfg.webtours_cancel.weight
+    logger.info(f'Imported WebToursCancelUserClass with {WebToursCancelUserClass.weight}')
